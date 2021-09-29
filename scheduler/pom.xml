@@ -9,10 +9,33 @@
 
   <name>scheduler</name>
   <url>http://maven.apache.org</url>
-
+  
+  <!-- this is temporarly commented because i have added the below properties -->
+  <!-- properties -->
+    <!-- project.build.sourceEncoding>UTF-8</project.build.sourceEncoding --> 
+  <!--/properties  -->
+  
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+  <!-- this is added for compiling and runing purpose from the liunx  -->
+   <maven.compiler.source>6</maven.compiler.source>
+   <maven.compiler.target>1.6</maven.compiler.target>
+ </properties>
+
+<!-- this also is added for compiling and runing purpose from the liunx  -->
+<build>
+<pluginManagement>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>2.22.1</version>
+    </plugin>
+  </plugins>
+</pluginManagement>
+</build>
+  
+  
+
   
   <dependencies>
   <dependency>
@@ -35,18 +58,6 @@
       <scope>test</scope>
     </dependency>
     
-    <dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-compiler-plugin</artifactId>
-  <version>3.8.1</version>
-  <type>maven-plugin</type>
-</dependency>
-    <dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <version>3.0.0-M5</version>
-  <type>maven-plugin</type>
-</dependency>
-    
+      
   </dependencies>
 </project>
