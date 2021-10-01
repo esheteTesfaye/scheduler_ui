@@ -32,7 +32,7 @@ public class loginLogout {
 	public void testLogin(String userName, String password) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.findElement(By.xpath("/html/body/div[1]/span")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/a[2]")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.linkText("Login")).click();
 		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(userName);
@@ -41,7 +41,7 @@ public class loginLogout {
 		String actualText = driver.findElement(By.xpath("//*[@id=\"banner\"]")).getText();
 		String expectedText = "success: welcome, oneshete@gmail.com";
 		Assert.assertEquals(expectedText, actualText);
-		driver.findElement(By.xpath("/html/body/div[1]/span")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/a[2]")).click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("Logout")).click();
 
