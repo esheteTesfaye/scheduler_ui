@@ -4,11 +4,16 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class loginLogout {
 
@@ -16,11 +21,16 @@ public class loginLogout {
 
 	@BeforeTest
 	public void beforeTest() {
+
 		System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
-		driver = new ChromeDriver();
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("start-maximized");
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
+		// driver = new HtmlUnitDriver(BrowserVersion.CHROME);
+		// driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.get("http://3.142.140.217/");
-		driver.manage().window().maximize();
+		// driver.manage().window().maximize();
 	}
 
 	@AfterTest
