@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="17000" started-at="2021-10-01T22:54:04Z" finished-at="2021-10-01T22:54:21Z">
+  <suite name="Default suite" duration-ms="35367" started-at="2021-10-02T16:41:34Z" finished-at="2021-10-02T16:42:10Z">
     <groups>
     </groups>
-    <test name="Test Tag1" duration-ms="17000" started-at="2021-10-01T22:54:04Z" finished-at="2021-10-01T22:54:21Z">
+    <test name="Default test" duration-ms="35367" started-at="2021-10-02T16:41:34Z" finished-at="2021-10-02T16:42:10Z">
       <class name="test.loginLogout">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.loginLogout@9629756]" name="beforeTest" is-config="true" duration-ms="13724" started-at="2021-10-01T18:54:04Z" finished-at="2021-10-01T18:54:18Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.loginLogout@58651fd0]" name="beforeTest" is-config="true" duration-ms="28701" started-at="2021-10-02T12:41:34Z" finished-at="2021-10-02T12:42:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String)[pri:0, instance:test.loginLogout@9629756]" name="testLogin" duration-ms="2995" started-at="2021-10-01T18:54:18Z" data-provider="userNameandPassword" finished-at="2021-10-01T18:54:21Z">
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String)[pri:0, instance:test.loginLogout@58651fd0]" name="testLogin" duration-ms="6321" started-at="2021-10-02T12:42:03Z" data-provider="userNameandPassword" finished-at="2021-10-02T12:42:09Z">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="closeTheBrowser()[pri:0, instance:test.loginLogout@9629756]" name="closeTheBrowser" is-config="true" duration-ms="257" started-at="2021-10-01T18:54:21Z" finished-at="2021-10-01T18:54:21Z">
+        <test-method status="PASS" signature="closeTheBrowser()[pri:0, instance:test.loginLogout@58651fd0]" name="closeTheBrowser" is-config="true" duration-ms="289" started-at="2021-10-02T12:42:09Z" finished-at="2021-10-02T12:42:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTheBrowser -->
       </class> <!-- test.loginLogout -->
-    </test> <!-- Test Tag1 -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
