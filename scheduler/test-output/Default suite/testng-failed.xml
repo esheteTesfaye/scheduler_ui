@@ -6,7 +6,8 @@
       <class name="test.loginLogout">
         <methods>
           <include name="beforeTest"/>
-          <include name="testLogin"/>
+          <include name="closeTheBrowser"/>
+          <include name="testLogin" invocation-numbers="0"/>
         </methods>
       </class> <!-- test.loginLogout -->
     </classes>

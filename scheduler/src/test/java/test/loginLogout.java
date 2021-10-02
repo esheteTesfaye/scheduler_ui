@@ -14,6 +14,8 @@ import org.testng.annotations.Test;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class loginLogout {
 
@@ -25,6 +27,8 @@ public class loginLogout {
 		System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
+		options.addArguments("disable-infobars");
+		options.addArguments("disable-extensions");
 		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
 		// driver = new HtmlUnitDriver(BrowserVersion.CHROME);
@@ -52,7 +56,10 @@ public class loginLogout {
 		String expectedText = "success: welcome, oneshete@gmail.com";
 		Assert.assertEquals(expectedText, actualText);
 		driver.findElement(By.xpath("/html/body/div[1]/a[2]")).click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait w = new WebDriverWait(driver, 3);
+		// presenceOfElementLocated condition
+		w.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Logout")));
 		driver.findElement(By.linkText("Logout")).click();
 
 	}
