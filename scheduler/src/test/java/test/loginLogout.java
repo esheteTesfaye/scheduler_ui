@@ -35,6 +35,7 @@ public class loginLogout {
 		// driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.get("http://3.142.140.217/");
 		// driver.manage().window().maximize();
+		System.out.println("This is my test case");
 	}
 
 	@AfterTest
