@@ -41,6 +41,13 @@
   when running the test case you can use the test name like this -DfileName=suteMaster.xml -->>
             <!--<suiteXmlFile>${fileName}</suiteXmlFile>-->
           </suiteXmlFiles>
+          
+          <!-- Force alphabetical order to have a reproducible build -->
+            <runOrder>alphabetical</runOrder>
+            <useSystemClassLoader>True</useSystemClassLoader>
+            <useManifestOnlyJar>false</useManifestOnlyJar>
+
+			<forkCount>1</forkCount>
         </configuration>
         
       </plugin>
