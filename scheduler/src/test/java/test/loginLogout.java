@@ -24,7 +24,7 @@ public class loginLogout {
 	@BeforeTest
 	public void beforeTest() {
 
-		System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
 		options.addArguments("disable-infobars");

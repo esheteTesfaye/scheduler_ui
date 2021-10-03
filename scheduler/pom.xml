@@ -37,6 +37,9 @@
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>src\test\java\testSuite\suteMaster.xml</suiteXmlFile>
+ <!-- instead of givng the test file name here it better approach to use like below and
+  when running the test case you can use the test name like this -DfileName=suteMaster.xml -->>
+            <suiteXmlFile>${fileName}</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
         
