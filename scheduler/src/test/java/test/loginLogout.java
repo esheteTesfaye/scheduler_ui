@@ -24,13 +24,13 @@ public class loginLogout {
 	@BeforeTest
 	public void beforeTest() {
 
-		// System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+		System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
+		// System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
 		options.addArguments("disable-infobars");
 		options.addArguments("disable-extensions");
-		options.addArguments("--headless");
+		options.addArguments("--headlessNoSandbox");
 		driver = new ChromeDriver(options);
 		// driver = new HtmlUnitDriver(BrowserVersion.CHROME);
 		// driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
